@@ -1,1 +1,4678 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maison Vero | Luxury Fashion</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+  <style>
+    /*======================================================
+GOOGLE FONTS
+======================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/*======================================================
+CSS VARIABLES
+======================================================*/
+:root{
+
+    --primary:#0b0b0b;
+    --secondary:#171717;
+    --card:#1e1e1e;
+
+    --gold:#c8a165;
+    --gold-light:#e6c48a;
+
+    --white:#ffffff;
+    --text:#d8d8d8;
+    --gray:#9d9d9d;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+    --transition:.4s ease;
+
+    --container:1320px;
+}
+
+
+/*======================================================
+RESET
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+/*======================================================
+COMMON ELEMENTS
+======================================================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+section{
+
+    padding:120px 0;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:var(--container);
+
+    margin:auto;
+
+}
+
+
+/*======================================================
+CUSTOM SCROLLBAR
+======================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold-light);
+
+}
+
+
+/*======================================================
+TEXT SELECTION
+======================================================*/
+
+::selection{
+
+    background:var(--gold);
+
+    color:#000;
+
+}
+
+
+/*======================================================
+SECTION TITLE
+======================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title p{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    margin-bottom:12px;
+
+}
+
+.section-title h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.4rem;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+}
+
+
+/*======================================================
+BUTTONS
+======================================================*/
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 42px;
+
+    background:var(--gold);
+
+    color:#111;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    background:var(--gold-light);
+
+    box-shadow:0 12px 30px rgba(200,161,101,.35);
+
+}
+
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 42px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    color:var(--white);
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--white);
+
+    color:#111;
+
+}
+
+
+/*======================================================
+IMAGE HOVER
+======================================================*/
+
+img{
+
+    transition:transform .8s ease;
+
+}
+
+.category-card:hover img,
+.product-card:hover img,
+.arrival-card:hover img,
+.lookbook img:hover,
+.story-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*======================================================
+GLASS EFFECT
+======================================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+/*======================================================
+FADE ANIMATION
+======================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp 1s ease forwards;
+
+}
+
+
+/*======================================================
+RESPONSIVE FOUNDATION
+======================================================*/
+
+@media(max-width:992px){
+
+    section{
+
+        padding:90px 0;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.6rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+
+        width:94%;
+
+    }
+
+    .section-title{
+
+        margin-bottom:45px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+    .btn-primary,
+    .btn-secondary{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+/*======================================================
+LOADER
+======================================================*/
+
+.loader{
+    position: fixed;
+    inset: 0;
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loader-content{
+    text-align: center;
+}
+
+.loader-logo{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+.loader-logo span{
+    color: var(--gold);
+}
+
+.loader-line{
+    width: 220px;
+    height: 3px;
+    margin: 25px auto 0;
+    background: rgba(255,255,255,.12);
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.loader-line span{
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--gold);
+    animation: loading 2.5s linear forwards;
+}
+
+@keyframes loading{
+
+    100%{
+        width:100%;
+    }
+
+}
+
+
+/*======================================================
+HEADER
+======================================================*/
+
+.header{
+
+    position: fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    padding:25px 0;
+
+    transition:.4s;
+
+}
+
+.header.scrolled{
+
+    background:rgba(8,8,8,.92);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    padding:16px 0;
+
+}
+
+.header .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+/*======================================================
+LOGO
+======================================================*/
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.logo span{
+
+    color:var(--gold);
+
+}
+
+
+/*======================================================
+NAVIGATION
+======================================================*/
+
+.navbar ul{
+
+    display:flex;
+
+    gap:42px;
+
+}
+
+.navbar a{
+
+    color:var(--white);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.35s;
+
+}
+
+.navbar a:hover{
+
+    color:var(--gold);
+
+}
+
+.navbar a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*======================================================
+HEADER ICONS
+======================================================*/
+
+.header-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.header-icons a,
+.menu-btn{
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    color:var(--white);
+
+}
+
+.header-icons a:hover,
+.menu-btn:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+    transform:translateY(-3px);
+
+}
+
+.menu-btn{
+
+    display:none;
+
+}
+
+
+/*======================================================
+HERO
+======================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:url("assets/images/hero.jpg")
+    center/cover no-repeat;
+
+    overflow:hidden;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    to right,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.30));
+
+}
+
+.hero-container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-content{
+
+    max-width:720px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.hero-subtitle{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    margin-bottom:22px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:6rem;
+
+    line-height:1;
+
+    margin-bottom:28px;
+
+}
+
+.hero-text{
+
+    max-width:580px;
+
+    color:#dddddd;
+
+    margin-bottom:40px;
+
+    font-size:1.05rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+
+/*======================================================
+SCROLL INDICATOR
+======================================================*/
+
+.scroll-down{
+
+    position:absolute;
+
+    bottom:40px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    z-index:5;
+
+}
+
+.scroll-down span{
+
+    font-size:.72rem;
+
+    letter-spacing:4px;
+
+    color:#ddd;
+
+}
+
+.mouse{
+
+    width:30px;
+
+    height:50px;
+
+    border:2px solid #fff;
+
+    border-radius:30px;
+
+    position:relative;
+
+}
+
+.mouse span{
+
+    position:absolute;
+
+    top:8px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:6px;
+
+    height:6px;
+
+    background:var(--gold);
+
+    border-radius:50%;
+
+    animation:scrollMouse 1.8s infinite;
+
+}
+
+@keyframes scrollMouse{
+
+    0%{
+
+        opacity:0;
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,18px);
+
+    }
+
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:992px){
+
+    .navbar{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:flex;
+
+    }
+
+    .hero h1{
+
+        font-size:4.3rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .loader-logo{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        margin:auto;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .scroll-down{
+
+        display:none;
+
+    }
+
+}
+/*======================================================
+BRAND STRIP
+======================================================*/
+
+.brand-strip{
+    background:#101010;
+    border-top:1px solid rgba(255,255,255,.06);
+    border-bottom:1px solid rgba(255,255,255,.06);
+    overflow:hidden;
+    padding:22px 0;
+}
+
+.brand-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.brand-wrapper span{
+    color:var(--gray);
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    transition:.35s;
+}
+
+.brand-wrapper span:hover{
+    color:var(--gold);
+}
+
+
+/*======================================================
+FEATURED CATEGORIES
+======================================================*/
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.category-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    height:620px;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+}
+
+.category-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.category-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.10));
+
+    z-index:1;
+
+}
+
+.category-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+.category-content{
+
+    position:absolute;
+
+    left:40px;
+
+    bottom:40px;
+
+    z-index:5;
+
+}
+
+.category-content h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    margin-bottom:18px;
+
+}
+
+.category-content a{
+
+    color:var(--gold);
+
+    display:inline-flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    font-weight:500;
+
+}
+
+.category-content a i{
+
+    transition:.35s;
+
+}
+
+.category-card:hover i{
+
+    transform:translateX(8px);
+
+}
+
+
+/*======================================================
+FEATURED COLLECTION
+======================================================*/
+
+.collection-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+
+.collection-large{
+
+    position:relative;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    height:720px;
+
+}
+
+.collection-large img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.collection-large::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.10));
+
+}
+
+.collection-content{
+
+    position:absolute;
+
+    left:60px;
+
+    bottom:60px;
+
+    z-index:5;
+
+}
+
+.collection-content span{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+}
+
+.collection-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    margin:20px 0 35px;
+
+    line-height:1;
+
+}
+
+
+/*======================================================
+SIDE CARDS
+======================================================*/
+
+.collection-side{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+.small-card{
+
+    position:relative;
+
+    height:345px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+}
+
+.small-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.small-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.05));
+
+}
+
+.small-content{
+
+    position:absolute;
+
+    left:30px;
+
+    bottom:30px;
+
+    z-index:5;
+
+}
+
+.small-content h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+.small-content p{
+
+    color:#ddd;
+
+}
+
+
+/*======================================================
+EDITORIAL BANNER
+======================================================*/
+
+.editorial-banner{
+
+    position:relative;
+
+    height:85vh;
+
+    margin-top:130px;
+
+    background:url("assets/images/editorial.jpg")
+    center/cover no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.editorial-banner .overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.editorial-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+}
+
+.editorial-content p{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.editorial-content h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:5rem;
+
+    line-height:1;
+
+    margin-bottom:35px;
+
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:1100px){
+
+    .category-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .collection-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .collection-large{
+
+        height:600px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .brand-wrapper{
+
+        justify-content:center;
+
+        gap:25px;
+
+    }
+
+    .category-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .category-card{
+
+        height:480px;
+
+    }
+
+    .collection-large{
+
+        height:480px;
+
+    }
+
+    .small-card{
+
+        height:280px;
+
+    }
+
+    .collection-content{
+
+        left:30px;
+
+        bottom:30px;
+
+    }
+
+    .collection-content h2{
+
+        font-size:2.8rem;
+
+    }
+
+    .editorial-content h2{
+
+        font-size:3rem;
+
+    }
+
+}
+/*======================================================
+BEST SELLERS
+======================================================*/
+
+.best-sellers{
+    background:#0f0f0f;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+/*======================================================
+PRODUCT CARD
+======================================================*/
+
+.product-card{
+    background:#161616;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.45s ease;
+    position:relative;
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+}
+
+.product-card:hover{
+    transform:translateY(-12px);
+    border-color:rgba(200,161,101,.45);
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+
+/*======================================================
+PRODUCT IMAGE
+======================================================*/
+
+.product-image{
+    position:relative;
+    overflow:hidden;
+    height:420px;
+    background:#111;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s ease;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.1);
+}
+
+/*======================================================
+IMAGE OVERLAY
+======================================================*/
+
+.product-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.4s ease;
+}
+
+.product-card:hover .product-overlay{
+    opacity:1;
+    visibility:visible;
+}
+
+/*======================================================
+QUICK VIEW BUTTON
+======================================================*/
+
+.quick-btn{
+    padding:14px 32px;
+    background:var(--gold);
+    color:#111;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.quick-btn:hover{
+    background:var(--white);
+    transform:translateY(-3px);
+}
+
+/*======================================================
+BADGES
+======================================================*/
+
+.badge{
+    position:absolute;
+    top:18px;
+    left:18px;
+    background:var(--gold);
+    color:#111;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:1px;
+    padding:8px 14px;
+    border-radius:50px;
+    z-index:10;
+}
+
+/*======================================================
+WISHLIST BUTTON
+======================================================*/
+
+.wishlist-btn{
+    position:absolute;
+    top:18px;
+    right:18px;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.35s;
+    z-index:10;
+}
+
+.wishlist-btn:hover{
+    background:var(--gold);
+    color:#111;
+    transform:rotate(10deg) scale(1.08);
+}
+/*======================================================
+PRODUCT INFO
+======================================================*/
+
+.product-info{
+
+    padding:28px 25px 30px;
+
+}
+
+.product-info .category{
+
+    display:inline-block;
+
+    color:var(--gold);
+
+    font-size:.82rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+}
+
+.product-info h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:600;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+    transition:var(--transition);
+
+}
+
+.product-card:hover .product-info h3{
+
+    color:var(--gold);
+
+}
+
+
+/*======================================================
+STAR RATING
+======================================================*/
+
+.rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    margin-bottom:20px;
+
+}
+
+.rating i{
+
+    color:var(--gold);
+
+    font-size:.9rem;
+
+}
+
+
+/*======================================================
+PRICE
+======================================================*/
+
+.price{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+}
+
+.new-price{
+
+    color:var(--white);
+
+    font-size:1.4rem;
+
+    font-weight:600;
+
+}
+
+.old-price{
+
+    color:var(--gray);
+
+    text-decoration:line-through;
+
+}
+
+
+/*======================================================
+ADD TO CART BUTTON
+======================================================*/
+
+.cart-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:50px;
+
+    color:var(--white);
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.cart-btn:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+    border-color:var(--gold);
+
+    transform:translateY(-3px);
+
+}
+
+
+/*======================================================
+PRODUCT CARD GLOW
+======================================================*/
+
+.product-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    border:1px solid rgba(200,161,101,.45);
+
+    opacity:0;
+
+    transition:.4s ease;
+
+    pointer-events:none;
+
+}
+
+
+.product-card:hover::before{
+
+    opacity:1;
+
+}
+
+.product-card:hover::before{
+
+    opacity:1;
+
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:1200px){
+
+    .products-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .products-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .product-image{
+
+        height:360px;
+
+    }
+
+    .product-info h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .new-price{
+
+        font-size:1.2rem;
+
+    }
+
+}
+/*======================================================
+FASHION VIDEO
+======================================================*/
+
+.fashion-video{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.fashion-video video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.video-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.70)
+    );
+}
+
+.video-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.video-content p{
+    color:var(--gold);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.video-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    line-height:1.1;
+    margin-bottom:35px;
+    max-width:900px;
+}
+
+
+/*======================================================
+OUR STORY
+======================================================*/
+
+.our-story{
+    background:#111;
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.story-image{
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.story-image img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+}
+
+.story-content .small-title{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:.9rem;
+}
+
+.story-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    line-height:1.1;
+    margin:20px 0 30px;
+}
+
+.story-content p{
+    color:var(--text);
+    margin-bottom:22px;
+    font-size:1rem;
+}
+
+.story-content .btn-secondary{
+    margin-top:15px;
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:992px){
+
+    .story-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .story-image img{
+        height:500px;
+    }
+
+    .video-content h2{
+        font-size:3.8rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .fashion-video{
+        height:80vh;
+    }
+
+    .video-content h2{
+        font-size:2.7rem;
+    }
+
+    .story-content{
+        text-align:center;
+    }
+
+    .story-content h2{
+        font-size:2.8rem;
+    }
+
+    .story-image img{
+        height:420px;
+    }
+
+}
+/*======================================================
+STATISTICS
+======================================================*/
+
+.statistics{
+    background:linear-gradient(180deg,#0b0b0b,#121212);
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-box{
+
+    text-align:center;
+
+    padding:55px 30px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(18px);
+
+    transition:var(--transition);
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(200,161,101,.45);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.stat-box h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    color:var(--gold);
+
+    margin-bottom:12px;
+
+}
+
+.stat-box p{
+
+    color:var(--text);
+
+    letter-spacing:1px;
+
+}
+
+
+/*======================================================
+LUXURY CTA
+======================================================*/
+
+.luxury-cta{
+
+    padding:140px 0;
+
+    background:#111;
+
+}
+
+.cta-box{
+
+    max-width:950px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:80px 60px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.cta-box span{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+}
+
+.cta-box h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin:22px 0;
+
+}
+
+.cta-box p{
+
+    max-width:650px;
+
+    margin:0 auto 40px;
+
+    color:var(--text);
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:992px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .cta-box{
+
+        padding:60px 40px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:3rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stat-box{
+
+        padding:45px 25px;
+
+    }
+
+    .stat-box h2{
+
+        font-size:3rem;
+
+    }
+
+    .cta-box{
+
+        padding:45px 25px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cta-buttons a{
+
+        width:100%;
+
+    }
+
+}
+/*======================================================
+NEW ARRIVALS
+======================================================*/
+
+.new-arrivals{
+    background:var(--primary);
+}
+
+.arrival-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.arrival-card{
+    background:var(--secondary);
+    border-radius:22px;
+    overflow:hidden;
+    transition:var(--transition);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:var(--shadow);
+}
+
+.arrival-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(200,161,101,.45);
+}
+
+.arrival-card img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    transition:.8s ease;
+}
+
+.arrival-card:hover img{
+    transform:scale(1.08);
+}
+
+.arrival-content{
+    padding:25px;
+}
+
+.arrival-content span{
+    display:inline-block;
+    color:var(--gold);
+    font-size:.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.arrival-content h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    margin-bottom:12px;
+    transition:var(--transition);
+}
+
+.arrival-card:hover h3{
+    color:var(--gold);
+}
+
+.arrival-content p{
+    font-size:1.1rem;
+    color:var(--white);
+    font-weight:600;
+}
+
+
+/*======================================================
+LOOKBOOK
+======================================================*/
+
+.lookbook{
+    background:#111;
+}
+
+.lookbook-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.lookbook-grid img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.8s ease;
+}
+
+.lookbook-grid img:hover{
+    transform:scale(1.05);
+    filter:brightness(1.05);
+}
+
+
+/*======================================================
+PROMOTION
+======================================================*/
+
+.promotion{
+    padding:140px 0;
+}
+
+.promo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.promo-left span{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.promo-left h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    line-height:1.1;
+    margin:20px 0;
+}
+
+.promo-left p{
+    color:var(--text);
+    margin-bottom:35px;
+    max-width:480px;
+}
+
+.promo-right{
+    overflow:hidden;
+    border-radius:24px;
+    box-shadow:var(--shadow);
+}
+
+.promo-right img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+}
+
+
+/*======================================================
+DESIGNER QUOTE
+======================================================*/
+
+.designer-quote{
+    background:#0d0d0d;
+}
+
+.quote-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.quote-box i{
+    font-size:3rem;
+    color:var(--gold);
+    margin-bottom:30px;
+}
+
+.quote-box h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3.4rem;
+    line-height:1.3;
+    font-weight:500;
+}
+
+.quote-box span{
+    display:block;
+    margin-top:35px;
+    color:var(--gold);
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:1100px){
+
+    .arrival-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .promo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .promo-right img{
+        height:500px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .arrival-grid,
+    .lookbook-grid{
+        grid-template-columns:1fr;
+    }
+
+    .arrival-card img{
+        height:320px;
+    }
+
+    .lookbook-grid img{
+        height:320px;
+    }
+
+    .promo-left{
+        text-align:center;
+    }
+
+    .promo-left h2{
+        font-size:2.8rem;
+    }
+
+    .promo-left p{
+        margin:0 auto 30px;
+    }
+
+    .promo-right img{
+        height:380px;
+    }
+
+    .quote-box h2{
+        font-size:2.2rem;
+    }
+
+}
+/*======================================================
+TESTIMONIALS
+======================================================*/
+
+.testimonials{
+    background:#111;
+}
+
+.testimonial-wrapper{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:60px;
+}
+
+.testimonial-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:40px;
+    backdrop-filter:blur(18px);
+    transition:var(--transition);
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(200,161,101,.45);
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+.stars{
+    display:flex;
+    gap:6px;
+    margin-bottom:22px;
+}
+
+.stars i{
+    color:var(--gold);
+}
+
+.testimonial-card p{
+    color:var(--text);
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.client{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.client img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.client h4{
+    margin-bottom:4px;
+}
+
+.client span{
+    color:var(--gray);
+    font-size:.9rem;
+}
+
+
+/*======================================================
+FAQ
+======================================================*/
+
+.faq{
+    background:var(--primary);
+}
+
+.faq-item{
+    margin-bottom:20px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    overflow:hidden;
+    background:#151515;
+}
+
+.faq-question{
+    width:100%;
+    padding:24px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:var(--white);
+    font-size:1rem;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.faq-question i{
+    color:var(--gold);
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 25px;
+    color:var(--text);
+}
+
+
+/* Active FAQ */
+
+.faq-item.active .faq-answer{
+    max-height:250px;
+}
+
+.faq-item.active .faq-question i{
+    transform:rotate(45deg);
+}
+
+
+/*======================================================
+NEWSLETTER
+======================================================*/
+
+.newsletter{
+    background:linear-gradient(135deg,#101010,#1a1a1a);
+}
+
+.newsletter-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:70px 50px;
+    border-radius:28px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+}
+
+.newsletter-box span{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.newsletter-box h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3.5rem;
+    margin:18px 0;
+}
+
+.newsletter-box p{
+    color:var(--text);
+    max-width:620px;
+    margin:0 auto 35px;
+}
+
+.newsletter form{
+    display:flex;
+    max-width:650px;
+    margin:auto;
+    gap:15px;
+}
+
+.newsletter input{
+    flex:1;
+    padding:18px 24px;
+    background:#0f0f0f;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:50px;
+}
+
+.newsletter input::placeholder{
+    color:#888;
+}
+
+.newsletter button{
+    padding:18px 38px;
+    background:var(--gold);
+    color:#111;
+    border-radius:50px;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.newsletter button:hover{
+    background:var(--gold-light);
+    transform:translateY(-3px);
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:992px){
+
+    .testimonial-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .testimonial-card{
+        padding:28px;
+    }
+
+    .newsletter-box{
+        padding:45px 25px;
+    }
+
+    .newsletter-box h2{
+        font-size:2.5rem;
+    }
+
+    .newsletter form{
+        flex-direction:column;
+    }
+
+    .newsletter button{
+        width:100%;
+    }
+
+    .faq-question{
+        padding:20px;
+        text-align:left;
+    }
+
+}
+/*======================================================
+INSTAGRAM
+======================================================*/
+
+.instagram{
+    background:#111;
+}
+
+.instagram-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:18px;
+    margin-top:60px;
+}
+
+.instagram-grid img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:18px;
+    cursor:pointer;
+    transition:.45s ease;
+}
+
+.instagram-grid img:hover{
+    transform:translateY(-8px) scale(1.05);
+    filter:brightness(1.08);
+}
+
+
+/*======================================================
+FOOTER
+======================================================*/
+
+.footer{
+    background:#090909;
+    padding:100px 0 30px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:60px;
+    margin-bottom:60px;
+}
+
+.footer-logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.footer-logo span{
+    color:var(--gold);
+}
+
+.footer p{
+    color:var(--text);
+    max-width:320px;
+}
+
+.footer h3{
+    margin-bottom:22px;
+    font-size:1.15rem;
+}
+
+.footer ul li{
+    margin-bottom:14px;
+}
+
+.footer ul li a{
+    color:var(--gray);
+    transition:.3s;
+}
+
+.footer ul li a:hover{
+    color:var(--gold);
+    padding-left:8px;
+}
+
+.social-links{
+    display:flex;
+    gap:14px;
+}
+
+.social-links a{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.social-links a:hover{
+    background:var(--gold);
+    color:#111;
+    transform:translateY(-5px);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:30px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    max-width:100%;
+    color:var(--gray);
+}
+
+
+/*======================================================
+BACK TO TOP
+======================================================*/
+
+.back-top{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.2rem;
+    cursor:pointer;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+    transition:.35s;
+    z-index:999;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.back-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.back-top:hover{
+    background:var(--gold-light);
+    transform:translateY(-6px);
+}
+
+
+/*======================================================
+GLOBAL HOVER EFFECTS
+======================================================*/
+
+.category-card,
+.product-card,
+.arrival-card,
+.small-card,
+.story-image,
+.promo-right,
+.testimonial-card{
+    will-change:transform;
+}
+
+.category-card:hover,
+.product-card:hover,
+.arrival-card:hover,
+.small-card:hover,
+.story-image:hover,
+.promo-right:hover{
+    transform:translateY(-10px);
+}
+
+
+/*======================================================
+SMOOTH IMAGE TRANSITIONS
+======================================================*/
+
+.category-card img,
+.product-image img,
+.arrival-card img,
+.small-card img,
+.story-image img,
+.promo-right img,
+.lookbook-grid img,
+.instagram-grid img{
+    transition:transform .8s ease;
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:1200px){
+
+    .instagram-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .instagram-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:40px;
+    }
+
+    .footer p{
+        max-width:100%;
+        margin:auto;
+    }
+
+    .social-links{
+        justify-content:center;
+    }
+
+    .back-top{
+        width:48px;
+        height:48px;
+        right:18px;
+        bottom:18px;
+    }
+
+}
+/*=========================================
+ACTIVE NAV LINK
+=========================================*/
+
+.navbar a.active{
+    color:var(--gold);
+}
+
+.navbar a.active::after{
+    width:100%;
+}
+
+
+/*=========================================
+WISHLIST
+=========================================*/
+
+.wishlist-btn.active{
+    background:var(--gold);
+    color:#111;
+}
+
+
+/*=========================================
+RIPPLE EFFECT
+=========================================*/
+
+.btn-primary{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    transform:scale(0);
+
+    background:rgba(255,255,255,.35);
+
+    animation:ripple .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+  </style>
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- LOADER -->
+    <!-- ===================================== -->
+
+    <div class="loader">
+
+        <div class="loader-content">
+
+            <h1 class="loader-logo">
+                Maison <span>Vero</span>
+            </h1>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- HEADER -->
+    <!-- ===================================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <a href="#" class="logo">
+                Maison <span>Vero</span>
+            </a>
+
+            <nav class="navbar">
+
+                <ul>
+
+                    <li><a href="#Home">Home</a></li>
+
+                    <li><a href="#Shop">Shop</a></li>
+
+                    <li><a href="#Collection">Collections</a></li>
+
+                    <li><a href="#About">About</a></li>
+
+                    <li><a href="#Journal">Journal</a></li>
+
+                    <li><a href="#Contact">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+            <div class="header-icons">
+
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+
+                <button class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ===================================== -->
+    <!-- HERO -->
+    <!-- ===================================== -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-container">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    NEW LUXURY COLLECTION
+                </p>
+
+                <h1>
+
+                    Wear Confidence.
+                    <br>
+
+                    Live Elegance.
+
+                </h1>
+
+                <p class="hero-text">
+
+                    Timeless silhouettes crafted with premium fabrics,
+                    designed for those who appreciate modern luxury.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#Shop" class="btn-primary">
+                        Shop Collection
+                    </a>
+
+                    <a href="#Home" class="btn-secondary">
+                        Discover More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Scroll Down -->
+
+        <div class="scroll-down">
+
+            <span>SCROLL</span>
+
+            <div class="mouse">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ===================================== -->
+<!-- BRAND STRIP -->
+<!-- ===================================== -->
+
+<section class="brand-strip">
+
+    <div class="container">
+
+        <div class="brand-wrapper">
+
+            <span>Luxury Fashion</span>
+            <span>Premium Quality</span>
+            <span>Limited Edition</span>
+            <span>Worldwide Shipping</span>
+            <span>New Season</span>
+            <span>Exclusive Design</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FEATURED CATEGORIES -->
+<!-- ===================================== -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Explore</p>
+
+            <h2>Featured Categories</h2>
+
+        </div>
+
+        <div class="category-grid">
+
+            <!-- Card 1 -->
+
+            <div class="category-card">
+
+                <img src="./img/img.men4.webp" alt="Men Collection">
+
+                <div class="category-content">
+
+                    <h3>Men Collection</h3>
+
+                    <a href="">
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="category-card">
+
+                <img src="./img/img.women1.webp" alt="Women Collection">
+
+                <div class="category-content">
+
+                    <h3>Women Collection</h3>
+
+                    <a href="#Collection">
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="category-card">
+
+                <img src="./img/img.access1.webp" alt="Accessories">
+
+                <div class="category-content">
+
+                    <h3>Accessories</h3>
+
+                    <a href="#Shop">
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FEATURED COLLECTION -->
+<!-- ===================================== -->
+
+<section class="featured-collection">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Maison Vero</p>
+
+            <h2>Signature Collection</h2>
+
+        </div>
+
+        <div class="collection-grid">
+
+            <!-- Left -->
+
+            <div class="collection-large">
+
+                <img src="./img/img.spring1.webp" alt="Luxury Fashion">
+
+                <div class="collection-content">
+
+                    <span>Spring / Summer</span>
+
+                    <h2>
+                        Designed
+                        <br>
+                        To Inspire
+                    </h2>
+
+                    <a href="#Collection" class="btn-primary">
+
+                        View Collection
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="collection-side">
+
+                <!-- Item -->
+
+                <div class="small-card">
+
+                    <img src="./img/img.luxury ess.jfif" alt="Luxury">
+
+                    <div class="small-content">
+
+                        <h3>Modern Essentials</h3>
+
+                        <p>Luxury Everyday Wear</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item -->
+
+                <div class="small-card">
+
+                    <img src="./img/img.primium1.jfif" alt="Luxury">
+
+                    <div class="small-content">
+
+                        <h3>Premium Tailoring</h3>
+
+                        <p>Timeless Craftsmanship</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- EDITORIAL BANNER -->
+<!-- ===================================== -->
+
+<section class="editorial-banner">
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <div class="editorial-content">
+
+            <p>EDITOR'S PICK</p>
+
+            <h2>
+                Elevate Every
+                <br>
+                Moment.
+            </h2>
+
+            <a href="#Journal" class="btn-primary">
+
+                Discover Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================== -->
+<!-- BEST SELLERS -->
+<!-- ===================================== -->
+
+<section class="best-sellers">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Maison Vero</p>
+
+            <h2>Best Sellers</h2>
+
+        </div>
+
+        <div class="products-grid">
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">NEW</span>
+
+                    <button class="wishlist-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img src="./img/img.jacket.webp" alt="Luxury Jacket">
+
+                    <div class="product-overlay">
+
+                        <a href="#" class="quick-btn">
+                            Quick View
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Men
+                    </span>
+
+                    <h3>
+                        Signature Wool Jacket
+                    </h3>
+
+                    <div class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div class="price">
+
+                        <span class="new-price">$189</span>
+
+                        <span class="old-price">$239</span>
+
+                    </div>
+
+                    <a href="#" class="cart-btn">
+                        Add To Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">SALE</span>
+
+                    <button class="wishlist-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img src="./img/img.silk.jpg" alt="Luxury Dress">
+
+                    <div class="product-overlay">
+
+                        <a href="#" class="quick-btn">
+                            Quick View
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Women
+                    </span>
+
+                    <h3>
+                        Silk Evening Dress
+                    </h3>
+
+                    <div class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                    </div>
+
+                    <div class="price">
+
+                        <span class="new-price">$169</span>
+
+                        <span class="old-price">$220</span>
+
+                    </div>
+
+                    <a href="#" class="cart-btn">
+                        Add To Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">LIMITED</span>
+
+                    <button class="wishlist-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img src="./img/img.chelsa.webp" alt="Luxury Shoes">
+
+                    <div class="product-overlay">
+
+                        <a href="#" class="quick-btn">
+                            Quick View
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Footwear
+                    </span>
+
+                    <h3>
+                        Leather Chelsea Boots
+                    </h3>
+
+                    <div class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+
+                    </div>
+
+                    <div class="price">
+
+                        <span class="new-price">$249</span>
+
+                    </div>
+
+                    <a href="#" class="cart-btn">
+                        Add To Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    <span class="badge">HOT</span>
+
+                    <button class="wishlist-btn">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                    <img src="./img/img.bag.jpg" alt="Luxury Bag">
+
+                    <div class="product-overlay">
+
+                        <a href="#" class="quick-btn">
+                            Quick View
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category">
+                        Accessories
+                    </span>
+
+                    <h3>
+                        Premium Leather Bag
+                    </h3>
+
+                    <div class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div class="price">
+
+                        <span class="new-price">$210</span>
+
+                        <span class="old-price">$280</span>
+
+                    </div>
+
+                    <a href="#" class="cart-btn">
+                        Add To Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================== -->
+<!-- FASHION VIDEO -->
+<!-- ===================================== -->
+
+<section class="fashion-video">
+
+    <video autoplay muted loop playsinline>
+
+        <source src="assets/videos/fashion.mp4" type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="video-content">
+
+        <p>MAISON VERO FILM</p>
+
+        <h2>
+            Luxury Is Not
+            <br>
+            A Trend.
+        </h2>
+
+        <a href="#" class="btn-primary">
+            Watch Collection
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- OUR STORY -->
+<!-- ===================================== -->
+
+<section class="our-story">
+
+    <div class="container">
+
+        <div class="story-grid">
+
+            <!-- LEFT -->
+
+            <div class="story-image">
+
+                <img src="./img/img.modern.jfif"
+                    alt="Maison Vero">
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="story-content">
+
+                <span class="small-title">
+                    OUR STORY
+                </span>
+
+                <h2>
+
+                    Crafted For
+                    Modern Luxury
+
+                </h2>
+
+                <p>
+
+                    Maison Vero believes luxury is created through
+                    timeless design, premium craftsmanship and
+                    attention to every small detail.
+
+                </p>
+
+                <p>
+
+                    Every collection is carefully designed for
+                    individuals who appreciate confidence,
+                    elegance and sophistication.
+
+                </p>
+
+                <a href="#About" class="btn-secondary">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- STATISTICS -->
+<!-- ===================================== -->
+
+<section class="statistics">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat-box">
+
+                <h2 class="counter"
+                    data-target="12000">
+                    0
+                </h2>
+
+                <p>Happy Customers</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2 class="counter"
+                    data-target="350">
+                    0
+                </h2>
+
+                <p>Luxury Products</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2 class="counter"
+                    data-target="45">
+                    0
+                </h2>
+
+                <p>Countries Served</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2 class="counter"
+                    data-target="15">
+                    0
+                </h2>
+
+                <p>Years Experience</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- LUXURY CTA -->
+<!-- ===================================== -->
+
+<section class="luxury-cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <span>Exclusive Access</span>
+
+            <h2>
+
+                Become Part Of
+                The Maison Vero
+                Experience
+
+            </h2>
+
+            <p>
+
+                Discover exclusive collections,
+                early access launches and timeless
+                luxury designed for modern lifestyles.
+
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="#" class="btn-primary">
+                    Shop Now
+                </a>
+
+                <a href="#Contact" class="btn-secondary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================== -->
+<!-- NEW ARRIVALS -->
+<!-- ===================================== -->
+
+<section class="new-arrivals">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Latest Collection</p>
+
+            <h2>New Arrivals</h2>
+
+        </div>
+
+        <div class="arrival-grid">
+
+            <!-- Item 1 -->
+            <div class="arrival-card">
+
+                <img src="./img/img.blazer.jfif" alt="Arrival">
+
+                <div class="arrival-content">
+
+                    <span>MEN</span>
+
+                    <h3>Luxury Coat</h3>
+
+                    <p>$179</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 2 -->
+
+            <div class="arrival-card">
+
+                <img src="./img/img.elegent.webp" alt="Arrival">
+
+                <div class="arrival-content">
+
+                    <span>WOMEN</span>
+
+                    <h3>Elegant Dress</h3>
+
+                    <p>$199</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 3 -->
+
+            <div class="arrival-card">
+
+                <img src="./img/img.belt.webp" alt="Arrival">
+
+                <div class="arrival-content">
+
+                    <span>ACCESSORIES</span>
+
+                    <h3>Leather Belt</h3>
+
+                    <p>$79</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 4 -->
+
+            <div class="arrival-card">
+
+                <img src="./img/img.chelsea.jfif" alt="Arrival">
+
+                <div class="arrival-content">
+
+                    <span>FOOTWEAR</span>
+
+                    <h3>Chelsea Boots</h3>
+
+                    <p>$229</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- LOOKBOOK -->
+<!-- ===================================== -->
+
+<section class="lookbook">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Editorial</p>
+
+            <h2>Maison Vero Lookbook</h2>
+
+        </div>
+
+        <div class="lookbook-grid">
+
+            <img src="./img/img.blue.jfif" alt="">
+            <img src="./img/img.yellow.jfif" alt="">
+            <img src="./img/img.green.jfif" alt="">
+            <img src="./img/img.mix.jfif" alt="">
+            <img src="./img/img.red.jfif" alt="">
+            <img src="./img/img.pink.jfif" alt="">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PROMOTION -->
+<!-- ===================================== -->
+
+<section class="promotion">
+
+    <div class="container">
+
+        <div class="promo-grid">
+
+            <div class="promo-left">
+
+                <span>Exclusive</span>
+
+                <h2>
+
+                    Summer
+                    Collection
+                    2026
+
+                </h2>
+
+                <p>
+
+                    Minimal silhouettes crafted
+                    with premium fabrics.
+
+                </p>
+
+                <a href="#" class="btn-primary">
+
+                    Shop Now
+
+                </a>
+
+            </div>
+
+            <div class="promo-right">
+
+                <img src="./img/img.summer.webp"
+                    alt="Luxury Fashion">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- DESIGNER QUOTE -->
+<!-- ===================================== -->
+
+<section class="designer-quote">
+
+    <div class="container">
+
+        <div class="quote-box">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <h2>
+
+                Fashion is not about clothing.
+
+                It is about confidence,
+                identity and timeless elegance.
+
+            </h2>
+
+            <span>
+
+                — Maison Vero
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================== -->
+<!-- TESTIMONIALS -->
+<!-- ===================================== -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Testimonials</p>
+            <h2>What Our Clients Say</h2>
+
+        </div>
+
+        <div class="testimonial-wrapper">
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    "Exceptional quality and elegant craftsmanship.
+                    Every detail feels premium."
+                </p>
+
+                <div class="client">
+
+                    <img src="./img/img.client1.jfif" alt="Client">
+
+                    <div>
+                        <h4>James Carter</h4>
+                        <span>New York</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <p>
+                    "Maison Vero exceeded every expectation.
+                    Truly a luxury experience."
+                </p>
+
+                <div class="client">
+
+                    <img src="./img/img.client2.webp" alt="Client">
+
+                    <div>
+                        <h4>Emily Wilson</h4>
+                        <span>London</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FAQ -->
+<!-- ===================================== -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>Support</p>
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Do you offer worldwide shipping?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes, Maison Vero ships internationally with
+                    secure and fast delivery partners.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Can I return my order?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Yes. Returns are accepted within
+                    30 days in original condition.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                Are your products premium quality?
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+                <p>
+
+                    Every item is made using carefully selected
+                    premium materials.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- NEWSLETTER -->
+<!-- ===================================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <span>Exclusive Access</span>
+
+            <h2>
+
+                Join Maison Vero
+
+            </h2>
+
+            <p>
+
+                Receive new arrivals, exclusive offers
+                and luxury inspiration.
+
+            </p>
+
+            <form>
+
+                <input type="email"
+                    placeholder="Enter your email">
+
+                <button type="submit">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- INSTAGRAM -->
+<!-- ===================================== -->
+
+<section class="instagram">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>@MaisonVero</p>
+
+            <h2>Follow Our Journey</h2>
+
+        </div>
+
+        <div class="instagram-grid">
+
+            <img src="./img/img.linkin.png" alt="">
+            <img src="./img/img.tiktok.png" alt="">
+            <img src="./img/img.insta.jfif" alt="">
+            <img src="./img/img.pintrest.jfif" alt="">
+            <img src="./img/img.twitt.png" alt="">
+            <img src="./img/img.face.jfif" alt="">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FOOTER -->
+<!-- ===================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+
+                    Maison <span>Vero</span>
+
+                </h2>
+
+                <p>
+
+                    Luxury fashion crafted
+                    with timeless elegance.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Shop</h3>
+
+                <ul>
+
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Company</h3>
+
+                <ul>
+
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Follow</h3>
+
+                <div class="social-links">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Maison Vero. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ===================================== -->
+<!-- BACK TO TOP -->
+<!-- ===================================== -->
+
+<button class="back-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+    <!-- JS -->
+    <script>/*======================================================
+MAISON VERO | JAVASCRIPT PART 1
+Loader
+Sticky Header
+Back To Top
+======================================================*/
+
+
+/*======================================================
+LOADER
+======================================================*/
+
+window.addEventListener("load", () => {
+
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+
+    }, 2200);
+
+});
+
+
+/*======================================================
+HEADER
+======================================================*/
+
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 80) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/*======================================================
+BACK TO TOP
+======================================================*/
+
+const backTop = document.querySelector(".back-top");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        backTop.classList.add("show");
+
+    } else {
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+
+backTop.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+/*======================================================
+SMOOTH SCROLL FOR BUTTONS
+======================================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    });
+
+});
+/*======================================================
+MAISON VERO | JAVASCRIPT PART 2
+Mobile Menu
+FAQ
+Counter
+Scroll Reveal
+======================================================*/
+
+
+/*======================================================
+MOBILE MENU
+======================================================*/
+
+const menuBtn = document.querySelector(".menu-btn");
+const navbar = document.querySelector(".navbar");
+
+if (menuBtn && navbar) {
+
+    menuBtn.addEventListener("click", () => {
+
+        navbar.classList.toggle("active");
+
+        menuBtn.innerHTML = navbar.classList.contains("active")
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+}
+
+
+/*======================================================
+FAQ ACCORDION
+======================================================*/
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+        faqItems.forEach(faq => {
+
+            if (faq !== item) {
+
+                faq.classList.remove("active");
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+/*======================================================
+ANIMATED COUNTER
+======================================================*/
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+
+        const target = +counter.dataset.target;
+
+        let count = 0;
+
+        const speed = target / 120;
+
+        const update = () => {
+
+            count += speed;
+
+            if (count < target) {
+
+                counter.innerText = Math.floor(count);
+
+                requestAnimationFrame(update);
+
+            } else {
+
+                counter.innerText = target.toLocaleString() + "+";
+
+            }
+
+        };
+
+        update();
+
+        counterObserver.unobserve(counter);
+
+    });
+
+}, {
+
+    threshold: 0.5
+
+});
+
+counters.forEach(counter => counterObserver.observe(counter));
+
+
+/*======================================================
+SCROLL REVEAL
+======================================================*/
+
+const revealItems = document.querySelectorAll(
+    "section, .product-card, .category-card, .arrival-card, .testimonial-card"
+);
+
+const revealObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("fade-up");
+
+            revealObserver.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+revealItems.forEach(item => {
+
+    revealObserver.observe(item);
+
+});
+/*======================================================
+MAISON VERO | JAVASCRIPT PART 3
+Final Premium Effects
+======================================================*/
+
+
+/*======================================================
+WISHLIST
+======================================================*/
+
+const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+
+wishlistButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const icon = button.querySelector("i");
+
+        icon.classList.toggle("fa-regular");
+        icon.classList.toggle("fa-solid");
+
+        button.classList.toggle("active");
+
+    });
+
+});
+
+
+/*======================================================
+ACTIVE NAVIGATION
+======================================================*/
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const top = section.offsetTop - 150;
+
+        const height = section.offsetHeight;
+
+        if (pageYOffset >= top && pageYOffset < top + height) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        const href = link.getAttribute("href");
+
+        if (href === `#${current}`) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/*======================================================
+BUTTON RIPPLE EFFECT
+======================================================*/
+
+document.querySelectorAll(".btn-primary").forEach(button => {
+
+    button.addEventListener("click", function(e){
+
+        const ripple = document.createElement("span");
+
+        const rect = this.getBoundingClientRect();
+
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = size + "px";
+        ripple.style.height = size + "px";
+
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+        ripple.classList.add("ripple");
+
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+
+    });
+
+});
+
+
+/*======================================================
+PARALLAX IMAGE EFFECT
+======================================================*/
+
+window.addEventListener("mousemove", e => {
+
+    const hero = document.querySelector(".hero");
+
+    if (!hero) return;
+
+    const x = (window.innerWidth / 2 - e.clientX) / 60;
+
+    const y = (window.innerHeight / 2 - e.clientY) / 60;
+
+    hero.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
+
+});
+
+
+/*======================================================
+PRELOAD IMAGES
+======================================================*/
+
+document.querySelectorAll("img").forEach(img => {
+
+    if (img.complete) {
+
+        img.classList.add("loaded");
+
+    } else {
+
+        img.onload = () => img.classList.add("loaded");
+
+    }
+
+});
+
+
+/*======================================================
+CONSOLE MESSAGE
+======================================================*/
+
+console.log(`
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   MAISON VERO
+   Luxury Fashion Website
+
+   Designed with HTML
+   CSS
+   JavaScript
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+`);
+</script>
+
+</body>
+
+</html>
